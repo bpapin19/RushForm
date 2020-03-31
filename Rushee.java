@@ -28,7 +28,7 @@ public class Rushee extends JFrame implements ActionListener {
 	static JTextField emailIn = new JTextField(8);
 	static JTextField cwidIn = new JTextField(8);
 	static JTextField textArray[] = {nameIn, numberIn, emailIn, cwidIn};
-	JLabel title = new JLabel("Phi Kappa Tau Fall Rush 2019");
+	JLabel title = new JLabel("Photography Club Sign Up 2019");
 	JLabel nameOut = new JLabel("Name: ");
 	JLabel yearOut = new JLabel("Year: ");
 	JLabel numberOut = new JLabel("Phone Number: ");
@@ -41,7 +41,7 @@ public class Rushee extends JFrame implements ActionListener {
     static int count = 0;
 
     // Rush Events with corresponding day of the week
-	public static String[] events = {"Wednesday: Dodgeball", "Thursday: Football", "Friday: Car Destruction", "Monday: Driving Range", "Tuesday: Tacos", "Wednesday: Chill by the Grill", "Thursday: Bid Dinner", "End of Rush"};
+	public static String[] events = {"Wednesday: Dodgeball", "Thursday: Football", "Friday: Photo Demo", "Monday: Driving Range", "Tuesday: Tacos", "Wednesday: Chill by the Grill", "Thursday: Bid Dinner", "End of Rush"};
 	
 	static JLabel day;
 	static JLabel nextDay;
@@ -72,7 +72,7 @@ public class Rushee extends JFrame implements ActionListener {
 		add (bottomPanel, BorderLayout.SOUTH);
 		
 		//************ Add image to JFrame ***********
-		ImageIcon imgThisImage = new ImageIcon("/Users/brandonpapin/Downloads/barn.jpeg");
+		//ImageIcon imgThisImage = new ImageIcon("/Users/brandonpapin/Downloads/barn.jpeg");
 		Image transformed = imgThisImage.getImage().getScaledInstance(100, 100, java.awt.Image.SCALE_SMOOTH);
 		picture.setIcon(new ImageIcon(transformed));
 		bottomPanel.add(picture);
@@ -203,8 +203,8 @@ public class Rushee extends JFrame implements ActionListener {
             message.setRecipients(
                     Message.RecipientType.TO,
                     InternetAddress.parse(email));
-            message.setSubject("Phi Kappa Tau Rush");
-            message.setText("What's up " + firstName + "! Thanks for signing up at our rush event. Remember to also sign up for IFC recruitment using this link: https://www.fullerton.edu/sll/fslife/chapters.php \nHope to see you at our next event: \""); 
+            message.setSubject("Photography Club Sign Up");
+            message.setText("What's up " + firstName + "! Thanks for signing up at our event. Remember to also sign up for SL recruitment using this link: https://www.fullerton.edu/sll/fslife/chapters.php \nHope to see you at our next event: \""); 
             //+ nextDay.getText() + "\"");
 
             Transport.send(message);
